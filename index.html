@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Blog da Bruna</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div id="winamp">
+    <div class="winamp-header">
+        WINAMP
+        <button class="minimize" onclick="toggleWinamp()">_</button>
+    </div>
+    <div class="led"></div>
+
+    <div class="winamp-screen">
+        <marquee behavior="scroll" direction="left">
+            ♫ Tocando agora: Música do Blog da Bruna ♫
+        </marquee>
+    </div>
+
+    <div class="winamp-buttons">
+        <button onclick="playMusic()">▶</button>
+        <button onclick="pauseMusic()">⏸</button>
+        <button onclick="stopMusic()">■</button>
+    </div>
+
+    <audio id="player" loop>
+        <source src="funky-background-7664.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+
+
+        <marquee scrollamount="6">Moda • Novelas • Pensamentos</marquee>
+
+        <div class="layout">
+
+            <div class="menu">
+                <h3>MENU</h3>
+                <a href="index.html">Início</a>
+                <a href="posts.html">Posts</a>
+                <a href="#">Moda</a>
+                <a href="novelas.html">Novelas</a>
+                <a href="downloads.html">Downloads</a>
+                <a href="#">Links</a>
+            </div>
+
+            <div class="container">
+
+                <h1>Blog da Bruna</h1>
+                <img class="gif" src="fufurencia.gif" width="600" height="400"> 
+
+                <div class="box">
+                    <p>Sejam bem-vindos ao meu canto da internet!</p>
+                    <p>Temos um pouco de tudo aqui: moda, televisão, pensamentos e nostalgia</p>
+                </div>
+
+        <div class="box">
+            <p>Você é a visita número:</p>
+            <h2 id="contador"></h2>
+        </div>
+
+        <div class="box" style="text-align:center">
+            <img class="gif" src="bike.gif">
+            <p style="color:red; font-weight:bold;">🚧UNDER CONSTRUCTION🚧</p>
+        </div>
+
+            </div>
+        </div>
+
+        <footer>
+            © 2026 — Blog da Bruna :)
+        </footer>
+
+    <script src="script.js"></script>
+    </body>
+</html>

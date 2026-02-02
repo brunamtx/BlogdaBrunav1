@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Clique para entrar</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+    text-align: center;
+}
+
+.splash {
+    margin: 120px auto;
+    width: 520px;
+    background: #ffe6f2;
+    border: 6px outset #ff69b4;
+    padding: 30px;
+}
+
+.splash button {
+    margin-top: 20px;
+    padding: 15px 40px;
+    font-size: 20px;
+    background: #c77dff;
+    border: 5px outset #dda0ff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.splash button:active {
+    border: 5px inset #dda0ff;
+}
+</style>
+</head>
+
+<body>
+
+<marquee>Blog da Bruna • melhor visualizado com glitter no coração</marquee>
+
+<div class="splash">
+    <h1 class="glitter">Bem-vindos</h1>
+
+    <img src="alexandre-guifontes.gif">
+
+    <p>
+        <blink>ATENÇÃO:</blink><br>
+        Este site contém música de fundo e muito brilho.
+    </p>
+
+    <button onclick="entrar()">ENTRAR NO SITE</button>
+</div>
+
+<audio id="introMusic">
+    <source src="funky-background-7664.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function entrar() {
+    const music = document.getElementById("introMusic");
+    music.play();
+
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 500);
+}
+</script>
+
+</body>
+</html>

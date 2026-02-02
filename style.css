@@ -1,0 +1,238 @@
+body {
+    background-image: url("starss.gif");
+    background-repeat: repeat;
+    font-family: "Comic Sans MS", Verdana, Arial;
+    margin: 0;
+}
+
+marquee {
+    background: #ff69b4;
+    color:white;
+    font-weight: bold;
+    padding: 6px;
+    border-bottom: 4px ridge #dda0ff;
+}
+
+.layout {
+    width: 980px;
+    margin: 20px auto;
+    display: flex;
+    background: #ffccf2;
+    border: 6px ridge #a020f0;
+}
+
+.menu {
+    width: 220px;
+    background: #c77dff;
+    border: 5px outset #dda0ff;
+    padding: 10px;
+}
+
+.menu h3 {
+    background: #ffb6d5;
+    border: 3px inset #ffc0cb;
+    text-align: center;
+    padding: 6px;
+    color: purple;
+    text-shadow: 2px 2px white;
+}
+
+.menu a {
+    display: block;
+    margin: 10px 0;
+    padding: 6px;
+    background: #fff0fa;
+    border: 3px outset #ff69b4;
+    text-align: center;
+    text-decoration: none;
+    color: #800080;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    background: yellow;
+    border: 3px inset #ff69b4;
+}
+
+.container {
+    flex: 1;
+    background: #fff0fa;
+    border: 5px inset #a020f0;
+    padding: 15px;
+}
+
+.box {
+    background: #ffe6f2;
+    border: 4px outset #ff69b4;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+h1 {
+    text-align: center;
+    color: #a020f0;
+    text-shadow: 3px 3px #ffb6c1;
+}
+
+h2 {
+    color: #c71585;
+    text-shadow:2px 2px #ffd1dc;
+}
+
+.gif {
+    display: block;
+    margin: 10px auto;
+    border: 3px ridge #ff69b4;
+}
+
+ul {
+    list-style: square;
+    color: purple;
+}
+
+footer {
+    background: #c77dff;
+    border: 5px ridge #dda0ff;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+    color: white;
+}
+
+blink {
+    animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+.glitter {
+    background: linear-gradient(
+        45deg,
+        #ff69b4,
+        #dda0ff,
+        #ffffff,
+        #ff69b4;
+    );
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glitterMove 3s infinite;
+    font-weight: bold;
+}
+
+@keyframes glitterMove {
+    0% { background-position: 0% }
+    100% { background-position: 400% }
+}
+
+body {
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=183753, auto);
+}
+
+.player {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #ffe6f2;
+    border: 5px outset #ff69b4;
+    padding: 10px;
+    width: 220px;
+    text-align: center;
+    font-size: 12px;
+    z-index: 9999;
+}
+
+#winamp {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 260px;
+    background: #2b2b2b;
+    border: 4px outset #888;
+    font-family: "Verdana", monospace;
+    color: #00ff00;
+    z-index: 9999;
+}
+
+.winamp-header {
+    background: linear-gradient(#555, #222);
+    color: #00ff00;
+    text-align: center;
+    font-weight: bold;
+    padding: 4px;
+    border-bottom: 2px inset #000;
+}
+
+.winamp-screen {
+    background: black;
+    color: #00ff00;
+    padding: 6px;
+    font-size: 12px;
+    border: 2px inset #555;
+}
+
+.winamp-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 6px;
+    background: #3a3a3a;
+}
+
+.winamp-buttons button {
+    background: #555;
+    border: 3px outset #aaa;
+    color: #00ff00;
+    font-size: 14px;
+    cursor: pointer;
+    width: 40px;
+}
+
+.winamp-buttons button:active {
+    border: 3px inset #aaa;
+}
+
+.led {
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    box-shadow: 0 0 6px red;
+    animation: ledBlink 1s infinite;
+    margin: 4px auto;
+}
+
+@keyframes ledBlink {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+
+.minimize {
+    float: right;
+    background: #555;
+    border: 2px outset #aaa;
+    color: #00ff00;
+    font-size: 12px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+}
+
+.minimize:active {
+    border: 2px inset #aaa;
+}
+
+#winamp.minimized .winamp-screen,
+#winamp.minimized .winamp-buttons,
+#winamp.minimized .led {
+    display: none;
+}
+
+#winamp.minimized {
+    height: auto;
+}
